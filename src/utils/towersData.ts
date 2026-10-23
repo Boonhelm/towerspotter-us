@@ -1,4 +1,5 @@
 import type { WaterTower } from '../types/tower.ts';
+import { applyRealPhotoPatch } from './realPhotoPatch.ts';
 import {
   peachoidImg,
   peachoidDetailImg,
@@ -1300,4 +1301,4 @@ export function generateFull140Towers(): WaterTower[] {
 }
 
 // Exactly 140 towers guaranteed
-export const ALL_140_TOWERS = generateFull140Towers();
+export const ALL_140_TOWERS = applyRealPhotoPatch(generateFull140Towers());
